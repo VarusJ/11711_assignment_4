@@ -115,8 +115,8 @@ def compute_metrics(eval_pred, threshold=0.3):
 
 
 training_args = TrainingArguments(
-    output_dir="./bert_carer_minor_prot/results",
-    logging_dir="./bert_carer_minor_prot/logs",
+    output_dir="./bert_carer_minor_bert/results",
+    logging_dir="./bert_carer_minor_bert/logs",
     logging_strategy="steps",
     logging_steps=10,
     learning_rate=2e-5,
