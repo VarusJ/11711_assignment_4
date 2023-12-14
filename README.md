@@ -1,3 +1,8 @@
-# Assignment 3 for ANLP 11-711 -- Group 41
+# Assignment 4 for ANLP 11-711 -- Group 41
+## forked from assignment 3 repo
 
-This is the code for assignment 3 where we reproduce the GoEmotions paper [link](https://arxiv.org/pdf/2005.00547.pdf)
+Usage:
+- `pip install -r requirements.txt`
+- run `accelerate config` to configure your accelerate settings
+- For transfer learning, run `accelerate launch {target_file}.py`
+
