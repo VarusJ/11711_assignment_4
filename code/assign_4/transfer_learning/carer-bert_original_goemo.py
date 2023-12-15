@@ -45,7 +45,7 @@ label_list = [
     "neutral",
 ]
 
-tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased", problem_type="multi_label_classification")
+tokenizer = AutoTokenizer.from_pretrained("/home/zjing2/capstone/goemotions/bert_carer/results/checkpoint-5000", problem_type="multi_label_classification")
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 
 
@@ -94,7 +94,7 @@ def compute_metrics(eval_pred, threshold=0.3):
     }
 
 model = AutoModelForSequenceClassification.from_pretrained(
-    "bert-base-uncased",
+    "/home/zjing2/capstone/goemotions/bert_carer/results/checkpoint-5000",
     problem_type="multi_label_classification",
     num_labels=len(label_list),
     id2label=id2label,
@@ -102,8 +102,8 @@ model = AutoModelForSequenceClassification.from_pretrained(
 )
 
 training_args = TrainingArguments(
-    output_dir="./bert_goemo/results",
-    logging_dir="./bert_goemo/logs",
+    output_dir="./carer_goemo/results",
+    logging_dir="./carer_goemo/logs",
     logging_strategy="steps",
     logging_steps=10,
     learning_rate=2e-5,
