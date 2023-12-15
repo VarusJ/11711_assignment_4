@@ -136,3 +136,5 @@ cached*
 ckpt*
 
 results/
+.DS_Store
+**/.DS_Store
